@@ -19,4 +19,11 @@ Step 11 - Run the "Sensor-App" project as a java application. (Right click-> Run
 
 //Note
   1) You need to make sure mongoDb test database is up and running.
-  2) You may need to install "mongoDb compass" to add sample data to the database. (Since there is no registration method, you have to add      a sample user to the table in order to login to the desktop-client as an admin)
+  2) You may need to install "mongoDb compass" to add sample data to the database. (Since there is no registration method, you have to        add a sample user to the table in order to login to the desktop-client as an admin).
+  
+  
+  
+  
+  
+  
+  
