@@ -17,23 +17,28 @@ import rmi.api.ApiServiceInterface;
 
 public class RmiServer 
 {
+    //notification listner interface
 	private static NotificationListner listner;
+	//server running port number
 	private static int port;
 	
-	//constructor
+	//constructor with the NotificationListner and port
 	public RmiServer(int port,NotificationListner listner)
 	{
+	    //storing the paramaters
 		this.listner = listner;
 		this.port = port;
 	}
 	
 	public static void main(String[] args) throws RemoteException 
 	{
-		
+		//creating a registry
 		Registry registry = LocateRegistry.createRegistry(port);
-		
+
+		//creating ApiService class object
 		ApiService apiService = new ApiService();
 		ApiServiceInterface apiServiceInterface =  (ApiServiceInterface) UnicastRemoteObject.exportObject(apiService,0);
+		//binding the object
 		registry.rebind("RmiServer", apiServiceInterface);
 		
 		System.out.println("Rmi Server is running!");
@@ -50,18 +55,23 @@ public class RmiServer
 		            {
 		            	try
 		            	{
+		            	        //get sensors from the api
 		            			ArrayList<SensorModel> list = apiService.getAllSensors();
+		            			//waring list holds the imformation of the sensors which is either co2 level or smoke level is
+		            			//greater than to 5
 		            			ArrayList<SensorModel> warningList = new ArrayList<>();
 		            			
 		            			
 		            			for(int i = 0; i < list.size(); i++)
 		            			{
+		            			    //adding to the warning list
 		            				if(list.get(i).getCO2Level() > 5 || list.get(i).getSmokeLevel() > 5)
 		            				{
 		            					warningList.add(list.get(i));
 		            				}
 		            				if(i == list.size() - 1)
 		            				{
+		            				    //calling the notifyWarning with warningList to show the notification
 		            					if(warningList.size() > 0)
 				            			{
 				            				listner.notifyWarning(warningList);

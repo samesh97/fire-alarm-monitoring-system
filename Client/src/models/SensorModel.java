@@ -4,12 +4,17 @@ import java.io.Serializable;
 
 public class SensorModel implements Serializable{
 
+    //this class is to store a sensor which is taken by the API
+
+    //sensor attributes
 	private Object _id;
 	private boolean isActive;
 	private String floorNo;
 	private String roomNo;
 	private int smokeLevel;
 	private int CO2Level;
+
+	//SensorModel getters and setters
 	public Object get_id() {
 		return _id;
 	}
