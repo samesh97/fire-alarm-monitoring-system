@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rmi.client.Client">
    <children>
-      <Pane fx:id="loginPane" layoutX="15.0" layoutY="14.0" prefHeight="472.0" prefWidth="469.0" visible="false">
+      <Pane fx:id="loginPane" layoutX="15.0" layoutY="14.0" prefHeight="472.0" prefWidth="469.0">
          <children>
             <Label layoutX="72.0" layoutY="79.0" text="Admin Login">
                <font>
@@ -22,9 +22,9 @@
             <Button layoutX="156.0" layoutY="253.0" mnemonicParsing="false" onAction="#skipLogin" prefHeight="30.0" prefWidth="74.0" text="Skip" />
          </children>
       </Pane>
-      <Pane fx:id="loggedOnPane" layoutX="13.0" layoutY="10.0" prefHeight="480.0" prefWidth="476.0">
+      <Pane fx:id="loggedOnPane" layoutX="13.0" layoutY="10.0" prefHeight="480.0" prefWidth="476.0" visible="false">
          <children>
-            <Pane fx:id="sensorFullDetailsPane" cacheShape="false" layoutX="10.0" layoutY="299.0" prefHeight="175.0" prefWidth="457.0">
+            <Pane fx:id="sensorFullDetailsPane" cacheShape="false" layoutX="10.0" layoutY="299.0" prefHeight="175.0" prefWidth="457.0" visible="false">
                <children>
                   <Label fx:id="sensorID" layoutX="16.0" layoutY="18.0" text="Sensor ID" />
                   <Label fx:id="sensorFloorNumber" layoutX="18.0" layoutY="71.0" text="Floor Number" />
