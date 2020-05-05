@@ -1,1 +1,22 @@
+Step 1 - Clone the project.
+Step 2 - Open "Web-Client-Server" Project from Webstorm.
+Step 3 - Open Webstorm terminal and type "npm install".
+Step 4 - Navigate to the "backend" folder by the Webstorm terminal.
+Step 5 - execute the "npm install" command.
+Step 6 - execute "node server" command.
 
+//Wait untill the server starts
+//And then run web client by following these steps.
+
+Step 7 - navigate to the "Web-Client-Server" folder again by the terminal of webstorm.
+Step 8 - execute "npm start" command.
+
+//wait untill the web-client starts. It may take a while.
+
+Step 9 - import "Client" and "Sensor-App" Projects into Eclipse.
+Step 10 - Run the "Client" project as a java application. (Right click-> Run as -> Java application).
+Step 11 - Run the "Sensor-App" project as a java application. (Right click-> Run as -> Java application).
+
+//Note
+  1) You need to make sure mongoDb test database is up and running.
+  2) You may need to install "mongoDb compass" to add sample data to the database. (Since there is no registration method, you have to add      a sample user to the table in order to login to the desktop-client as an admin)
