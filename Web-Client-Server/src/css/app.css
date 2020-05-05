@@ -1,0 +1,9 @@
+.container
+{
+    background-color: darkorchid;
+    width: 100%;
+    min-height: 635px;
+    padding-bottom: 5%;
+    padding-top:5%;
+    height: auto;
+}

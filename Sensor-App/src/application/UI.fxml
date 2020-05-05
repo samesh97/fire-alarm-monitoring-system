@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+   <children>
+      <TextField fx:id="sensorIdField" layoutX="83.0" layoutY="243.0" prefHeight="32.0" prefWidth="346.0" promptText="Enter Sensor ID" />
+      <Button fx:id="registerButton" layoutX="186.0" layoutY="285.0" mnemonicParsing="false" onAction="#registerSensor" prefHeight="32.0" prefWidth="148.0" text="Register As Sensor" />
+      <Label fx:id="status" layoutX="83.0" layoutY="150.0" prefHeight="17.0" prefWidth="346.0" text="Status" />
+      <Label fx:id="smokeLevel" layoutX="83.0" layoutY="178.0" prefHeight="17.0" prefWidth="346.0" text="Smoke Level" />
+      <Label fx:id="co2Level" layoutX="83.0" layoutY="206.0" prefHeight="17.0" prefWidth="346.0" text="CO2 Level" />
+      <Label fx:id="response" alignment="CENTER" layoutX="83.0" layoutY="329.0" prefHeight="17.0" prefWidth="346.0" />
+      <Label fx:id="countLabel" layoutX="12.0" layoutY="14.0" prefHeight="23.0" prefWidth="478.0" text="Update Details In" />
+   </children>
+</AnchorPane>

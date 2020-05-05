@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rmi.client.Client">
+   <children>
+      <Pane fx:id="loginPane" layoutX="15.0" layoutY="14.0" prefHeight="472.0" prefWidth="469.0" visible="false">
+         <children>
+            <Label layoutX="72.0" layoutY="79.0" text="Admin Login">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="password" layoutX="72.0" layoutY="202.0" prefHeight="39.0" prefWidth="335.0" promptText="Password" />
+            <Button layoutX="72.0" layoutY="253.0" mnemonicParsing="false" onAction="#Login" prefHeight="31.0" prefWidth="73.0" text="Login" />
+            <Label fx:id="response" alignment="CENTER" layoutX="240.0" layoutY="252.0" prefHeight="31.0" prefWidth="168.0" textAlignment="CENTER" />
+            <TextField fx:id="username" layoutX="72.0" layoutY="157.0" prefHeight="39.0" prefWidth="335.0" promptText="Username" />
+            <Button layoutX="156.0" layoutY="253.0" mnemonicParsing="false" onAction="#skipLogin" prefHeight="30.0" prefWidth="74.0" text="Skip" />
+         </children>
+      </Pane>
+      <Pane fx:id="loggedOnPane" layoutX="13.0" layoutY="10.0" prefHeight="480.0" prefWidth="476.0">
+         <children>
+            <Pane fx:id="sensorFullDetailsPane" cacheShape="false" layoutX="10.0" layoutY="299.0" prefHeight="175.0" prefWidth="457.0">
+               <children>
+                  <Label fx:id="sensorID" layoutX="16.0" layoutY="18.0" text="Sensor ID" />
+                  <Label fx:id="sensorFloorNumber" layoutX="18.0" layoutY="71.0" text="Floor Number" />
+                  <Label fx:id="sensorRoomNumber" layoutX="16.0" layoutY="92.0" text="Room Number" />
+                  <Label fx:id="sensorStatus" layoutX="16.0" layoutY="45.0" text="Status" />
+                  <Label fx:id="sensorCo2Level" layoutX="14.0" layoutY="116.0" text="CO2 Level" />
+                  <Label fx:id="sensorSmokeLevel" layoutX="16.0" layoutY="141.0" text="Smoke L:evel" />
+                  <Button fx:id="updateSensorButton" layoutX="349.0" layoutY="137.0" mnemonicParsing="false" onAction="#UpdateSensor" text="Update Sensor" />
+               </children>
+            </Pane>
+            <Button fx:id="logoutButton" layoutX="247.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBackToLoginScreen" prefHeight="25.0" prefWidth="104.0" text="Logout" />
+            <Label layoutX="8.0" layoutY="6.0" prefHeight="17.0" prefWidth="113.0" text="Welcome" textFill="#ff1c1c">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <ListView fx:id="sensorListView" layoutX="8.0" layoutY="58.0" prefHeight="234.0" prefWidth="457.0" />
+            <Label layoutX="8.0" layoutY="37.0" text="All Sensors">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="addNewSensorButton" layoutX="357.0" layoutY="14.0" mnemonicParsing="false" onAction="#AddNewSensor" text="Add New Sensor" />
+         </children>
+      </Pane>
+      <Pane fx:id="addNewSensorPane" layoutX="23.0" layoutY="20.0" prefHeight="480.0" prefWidth="476.0" visible="false">
+         <children>
+            <Label fx:id="addNewOrUpdateSensorLabel" alignment="CENTER" layoutX="66.0" layoutY="89.0" prefHeight="31.0" prefWidth="343.0" text="Add New Sensor" textFill="#ff1c1c">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="floorNo" layoutX="66.0" layoutY="159.0" prefHeight="31.0" prefWidth="343.0" promptText="Floor Number" />
+            <TextField fx:id="roomNo" layoutX="67.0" layoutY="196.0" prefHeight="31.0" prefWidth="343.0" promptText="Room Number" />
+            <Button fx:id="createOrUpdateSensorButton" layoutX="66.0" layoutY="240.0" mnemonicParsing="false" onAction="#CreateNewSensor" prefHeight="30.0" prefWidth="130.0" text="Create" />
+            <Label fx:id="createSensorResponse" alignment="CENTER" contentDisplay="CENTER" layoutX="167.0" layoutY="241.0" prefHeight="31.0" prefWidth="243.0" textAlignment="CENTER" />
+            <Button layoutY="2.0" mnemonicParsing="false" onAction="#goBackToLoggedOnScreen" prefHeight="25.0" prefWidth="78.0" text="Go Back" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
